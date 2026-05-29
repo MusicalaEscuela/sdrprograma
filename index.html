@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salvémoslos del Reggaetón 2026 — Programa de mano · Musicala</title>
+  <meta name="description" content="Programa de mano interactivo de Salvémoslos del Reggaetón 2026: programación, actividades del público y calificación de experiencia." />
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Roboto:wght@300;400;500;700&family=Sacramento&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Fondo decorativo (notas, ondas, estrellas) -->
+  <div class="bg-decor" aria-hidden="true">
+    <svg class="bg-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="glow1" cx="20%" cy="20%" r="50%">
+          <stop offset="0%" stop-color="#c9a8ff" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#c9a8ff" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="glow2" cx="85%" cy="15%" r="40%">
+          <stop offset="0%" stop-color="#ffc0e0" stop-opacity="0.5"/>
+          <stop offset="100%" stop-color="#ffc0e0" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="glow3" cx="70%" cy="90%" r="55%">
+          <stop offset="0%" stop-color="#a8d0ff" stop-opacity="0.45"/>
+          <stop offset="100%" stop-color="#a8d0ff" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="1200" height="800" fill="url(#glow1)"/>
+      <rect width="1200" height="800" fill="url(#glow2)"/>
+      <rect width="1200" height="800" fill="url(#glow3)"/>
+      <!-- Onda -->
+      <path d="M0,600 C200,520 400,680 600,600 C800,520 1000,680 1200,600 L1200,800 L0,800 Z" fill="#6b21a8" opacity="0.04"/>
+      <path d="M0,650 C200,580 400,720 600,650 C800,580 1000,720 1200,650 L1200,800 L0,800 Z" fill="#a855f7" opacity="0.05"/>
+    </svg>
+
+    <!-- Notas musicales flotantes -->
+    <span class="float-note note-1">♪</span>
+    <span class="float-note note-2">♫</span>
+    <span class="float-note note-3">♩</span>
+    <span class="float-note note-4">♬</span>
+    <span class="float-note note-5">♪</span>
+    <span class="float-star star-1">✦</span>
+    <span class="float-star star-2">✧</span>
+    <span class="float-star star-3">✦</span>
+  </div>
+
+  <!-- Encabezado -->
+  <header class="site-header">
+    <div class="logo-wrap">
+      <img src="assets/logo.png"
+           alt="Musicala"
+           class="logo"
+           onerror="this.onerror=null;this.src='assets/logo.svg';" />
+    </div>
+    <p class="event-tag">Salvémoslos del Reggaetón <span>2026</span></p>
+  </header>
+
+  <!-- Contenedor principal: el JS decide qué vista mostrar -->
+  <main id="app" class="app-shell">
+    <!-- Renderizado por app.js -->
+  </main>
+
+  <footer class="site-footer">
+    <p>Hecho con <span class="heart">♡</span> por <strong>Musicala</strong> · Escuela de artes</p>
+  </footer>
+
+  <!-- App principal -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
